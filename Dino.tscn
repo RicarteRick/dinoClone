@@ -1,0 +1,268 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Dino.gd" type="Script" id=1]
+[ext_resource path="res://sprites/dino_morto.png" type="Texture" id=2]
+[ext_resource path="res://sprites/dino.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39.2467, 18.17 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "abaixado"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:shape:extents")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 39.2467, 18.17 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("dino:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 1866, 6, 118, 90 ), Rect2( 1984, 6, 118, 90 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("dino:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("dino:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("dino:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 1514, 2, 88, 94 ), Rect2( 1602, 2, 88, 94 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:shape:extents")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 20.3847, 42.1765 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("dino:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("dino:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("dino:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 1690, 2, 88, 94 ), Rect2( 1782, 2, 80, 94 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("dino:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("dino:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "morto_baixo"
+tracks/0/type = "value"
+tracks/0/path = NodePath("dino:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("dino:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 134, 28, 118, 60 ), Rect2( 258, 28, 118, 60 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("dino:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 17 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("dino:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 1338, 2, 88, 94 ), Rect2( 1426, 2, 88, 94 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:shape:extents")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 23.1031, 40.0906 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("dino:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("dino:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[node name="Dino" type="Area2D"]
+position = Vector2( 91.4294, 193.791 )
+script = ExtResource( 1 )
+
+[node name="dino" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 134, 28, 118, 60 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.57211, -5.14427 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/abaixado = SubResource( 2 )
+anims/andando = SubResource( 3 )
+anims/morto = SubResource( 4 )
+anims/morto_baixo = SubResource( 5 )
+anims/parado = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

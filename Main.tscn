@@ -1,0 +1,258 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://ParallaxBackground2.gd" type="Script" id=2]
+[ext_resource path="res://sprites/parallax_2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/parallax_1.png" type="Texture" id=4]
+[ext_resource path="res://parallax_background.gd" type="Script" id=5]
+[ext_resource path="res://sprites/dino.png" type="Texture" id=6]
+[ext_resource path="res://Dino.tscn" type="PackedScene" id=7]
+[ext_resource path="res://techna_sans/TechnaSans-Regular.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://BeepBox-Song (online-audio-converter.com)-[AudioTrimmer.com].ogg" type="AudioStream" id=9]
+[ext_resource path="res://sprites/shadedDark26.png" type="Texture" id=10]
+[ext_resource path="res://sprites/flatDark25.png" type="Texture" id=11]
+[ext_resource path="res://sprites/shadedDark27.png" type="Texture" id=12]
+[ext_resource path="res://sprites/flatDark26.png" type="Texture" id=13]
+
+[sub_resource type="Animation" id=1]
+resource_name = "primeiro_tarde"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.917647, 0.556863, 0.556863, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "segundo_tarde"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.917647, 0.556863, 0.556863, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.917647, 0.556863, 0.556863, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 4 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Chao:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.580392, 0.764706, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 0.4, 0.235294, 0.0941176, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Chao:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.580392, 0.764706, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "pisca_pisca"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="DynamicFont" id=9]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+script = ExtResource( 2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 2538.5, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 636.429, 359.417 )
+scale = Vector2( 3.6, 3.7 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground2/ParallaxLayer"]
+anims/primeiro_tarde = SubResource( 1 )
+anims/segundo_tarde = SubResource( 2 )
+anims/trocando = SubResource( 3 )
+anims/tudo_dnv = SubResource( 4 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+script = ExtResource( 5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 2400, 0 )
+
+[node name="Chao" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.580392, 0.764706, 1, 1 )
+position = Vector2( 426.242, 706.033 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 2, 104, 2400, 24 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/ParallaxLayer"]
+anims/trocando = SubResource( 5 )
+anims/tudo_dnv = SubResource( 6 )
+
+[node name="Dino" parent="." instance=ExtResource( 7 )]
+position = Vector2( 81.4056, 656.317 )
+
+[node name="Pontos" type="Label" parent="."]
+editor/display_folded = true
+margin_left = 29.6948
+margin_top = 27.3735
+margin_right = 119.695
+margin_bottom = 57.3735
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 7 )
+text = "Pontos: 0"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pontos"]
+anims/pisca_pisca = SubResource( 8 )
+
+[node name="Record" type="Label" parent="."]
+margin_left = 595.737
+margin_top = 26.7556
+margin_right = 685.737
+margin_bottom = 56.7556
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 9 )
+text = "Record: 0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="pulo" type="TouchScreenButton" parent="."]
+position = Vector2( 1102.45, 368.242 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 11 )
+action = "pular"
+visibility_mode = 1
+
+[node name="abaixado" type="TouchScreenButton" parent="."]
+position = Vector2( 48.688, 368 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 12 )
+pressed = ExtResource( 13 )
+action = "abaixar"
+visibility_mode = 1
